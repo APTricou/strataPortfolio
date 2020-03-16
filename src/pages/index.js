@@ -169,7 +169,7 @@ class HomeIndex extends React.Component {
             <div className="row">
               <div className="8u 12u$(small)">
                 <form
-                  name="form1"
+                  name="contact-form"
                   method="post"
                   data-netlify-honeypot="bot-field"
                   data-netlify="true"
@@ -200,7 +200,6 @@ class HomeIndex extends React.Component {
                   <input
                     style={{ marginTop: 10 }}
                     type="submit"
-                    form="form1"
                     value="Send Message"
                   />
                 </form>
