@@ -16,3 +16,5 @@ Install this starter (assuming Gatsby is installed) by running from your CLI:
 `gatsby new gatsby-starter-strata https://github.com/ChangoMan/gatsby-starter-strata`
 
 Run `gatsby develop` in the terminal to start.
+
+Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>

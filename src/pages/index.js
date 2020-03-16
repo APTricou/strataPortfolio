@@ -5,112 +5,201 @@ import Layout from '../components/layout'
 // import Lightbox from 'react-images'
 import Gallery from '../components/Gallery'
 
-import thumb01 from '../assets/images/thumbs/01.jpg'
-import thumb02 from '../assets/images/thumbs/02.jpg'
-import thumb03 from '../assets/images/thumbs/03.jpg'
-import thumb04 from '../assets/images/thumbs/04.jpg'
+import thumb01 from '../assets/images/fulls/SVGBoardSplash.png'
+import thumb02 from '../assets/images/fulls/MusicBars.jpg'
+import thumb03 from '../assets/images/fulls/battleship.jpg'
+import thumb04 from '../assets/images/fulls/Discord.jpg'
 import thumb05 from '../assets/images/thumbs/05.jpg'
 import thumb06 from '../assets/images/thumbs/06.jpg'
 
-import full01 from '../assets/images/fulls/01.jpg'
-import full02 from '../assets/images/fulls/02.jpg'
-import full03 from '../assets/images/fulls/03.jpg'
-import full04 from '../assets/images/fulls/04.jpg'
+import full01 from '../assets/images/fulls/SVGBoardSplash.png'
+import full02 from '../assets/images/fulls/MusicBars.jpg'
+import full03 from '../assets/images/fulls/battleship.jpg'
+import full04 from '../assets/images/fulls/Discord.jpg'
 import full05 from '../assets/images/fulls/05.jpg'
 import full06 from '../assets/images/fulls/06.jpg'
 
-const DEFAULT_IMAGES = [
-    { id: '1', source: full01, thumbnail: thumb01, caption: 'Photo 1', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '2', source: full02, thumbnail: thumb02, caption: 'Photo 2', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '3', source: full03, thumbnail: thumb03, caption: 'Photo 3', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '4', source: full04, thumbnail: thumb04, caption: 'Photo 4', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '5', source: full05, thumbnail: thumb05, caption: 'Photo 5', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'},
-    { id: '6', source: full06, thumbnail: thumb06, caption: 'Photo 6', description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.'}
-];
+const IMAGES = [
+  {
+    id: '1',
+    source: full01,
+    thumbnail: thumb01,
+    caption: 'SVG Board',
+    description: 'An online multi-user whiteboard platform.',
+  },
+  {
+    id: '2',
+    source: full02,
+    thumbnail: thumb02,
+    caption: 'Read The Room',
+    description: "An interactive playlist creator tied into Spotify's API.",
+  },
+  {
+    id: '3',
+    source: full03,
+    thumbnail: thumb03,
+    caption: 'SeaBay',
+    description: 'A fictional ecommerce site with full Stripe functionality.',
+  },
+  {
+    id: '4',
+    source: full04,
+    thumbnail: thumb04,
+    caption: 'Discord Bot',
+    description: 'A functional Discord Bot with ever expanding capabilities.',
+  },
+  {
+    id: '5',
+    source: full05,
+    thumbnail: thumb05,
+    caption: 'Sojourn TRC',
+    description: 'A static website build with Gatsby and Netlify, with CMS.',
+  },
+  {
+    id: '6',
+    source: full06,
+    thumbnail: thumb06,
+    caption: 'Placeholder',
+    description: 'Lorem ipsum dolor sit amet nisl sed nullam feugiat.',
+  },
+]
 
 class HomeIndex extends React.Component {
+  render() {
+    const siteTitle = 'Antanas Tricou - Developer'
+    const siteDescription =
+      'I work primarily in Javascript, React, Redux, Postgres, Express.js, HTML, CSS, and Node. I also in noSQL databases, Python, C#, Unity, Websockets, and React-Native. I enjoy learning and applying new technologies to find solutions. I like climbing, video games,traveling, and board games.'
 
-    render() {
-        const siteTitle = "Gatsby Starter - Strata"
-        const siteDescription = "Site description"
+    return (
+      <Layout>
+        <Helmet>
+          <title>{siteTitle}</title>
+          <meta name="description" content={siteDescription} />
+        </Helmet>
 
-        return (
-            <Layout>
-                <Helmet>
-                        <title>{siteTitle}</title>
-                        <meta name="description" content={siteDescription} />
-                </Helmet>
+        <div id="main">
+          <section id="one">
+            <header className="major">
+              <h2>
+                I love to find problems and build solutions.
+                <br />
+                There are always more tools to be built.
+              </h2>
+            </header>
+            <p>
+              I work primarily in Javascript, React, Redux, Postgres,
+              Express.js, HTML, CSS, and Node. I also in noSQL databases,
+              Python, C#, Unity, Websockets, and React-Native. I enjoy learning
+              and applying new technologies to find solutions.
+              <br />I like climbing, video games, traveling, and board games.
+            </p>
+            {/* <ul className="actions">
+              <li>
+                <a href="#" className="button">
+                  Learn More
+                </a>
+              </li>
+            </ul> */}
+          </section>
 
-                <div id="main">
+          <section id="two">
+            <h2>Recent Work</h2>
 
-                    <section id="one">
-                        <header className="major">
-                            <h2>Ipsum lorem dolor aliquam ante commodo<br />
-                            magna sed accumsan arcu neque.</h2>
-                        </header>
-                        <p>Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia.</p>
-                        <ul className="actions">
-                            <li><a href="#" className="button">Learn More</a></li>
-                        </ul>
-                    </section>
+            <Gallery
+              images={IMAGES.map(
+                ({ id, source, thumbnail, caption, description }) => ({
+                  source,
+                  thumbnail,
+                  caption,
+                  description,
+                })
+              )}
+            />
 
-                    <section id="two">
-                        <h2>Recent Work</h2>
+            <ul className="actions">
+              <li>
+                <a href="#" className="button">
+                  Full Portfolio
+                </a>
+              </li>
+            </ul>
+          </section>
 
-                        <Gallery images={DEFAULT_IMAGES.map(({ id, source, thumbnail, caption, description }) => ({
-                            source,
-                            thumbnail,
-                            caption,
-                            description
-                        }))} />
-
-                        <ul className="actions">
-                            <li><a href="#" className="button">Full Portfolio</a></li>
-                        </ul>
-                    </section>
-
-                    <section id="three">
-                        <h2>Get In Touch</h2>
-                        <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
-                        <div className="row">
-                            <div className="8u 12u$(small)">
-                                <form method="post" action="#">
-                                    <div className="row uniform 50%">
-                                        <div className="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-                                        <div className="6u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                                        <div className="12u"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-                                    </div>
-                                </form>
-                                <ul className="actions">
-                                    <li><input type="submit" value="Send Message" /></li>
-                                </ul>
-                            </div>
-                            <div className="4u 12u$(small)">
-                                <ul className="labeled-icons">
-                                    <li>
-                                        <h3 className="icon fa-home"><span className="label">Address</span></h3>
-                                        1234 Somewhere Rd.<br />
-                                        Nashville, TN 00000<br />
-                                        United States
-                                    </li>
-                                    <li>
-                                        <h3 className="icon fa-mobile"><span className="label">Phone</span></h3>
-                                        000-000-0000
-                                    </li>
-                                    <li>
-                                        <h3 className="icon fa-envelope-o"><span className="label">Email</span></h3>
-                                        <a href="#">hello@untitled.tld</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
-
-            </Layout>
-        )
-    }
+          <section id="three">
+            <h2>Get In Touch</h2>
+            <p>
+              I am currently interested in entry level developer positions.
+              While my background is primarily Javascript and React, I am
+              flexible and interested in learning new languages and frameworks.
+            </p>
+            <div className="row">
+              <div className="8u 12u$(small)">
+                <form method="post" action="#">
+                  <div className="row uniform 50%">
+                    <div className="6u 12u$(xsmall)">
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Name"
+                      />
+                    </div>
+                    <div className="6u 12u$(xsmall)">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div className="12u">
+                      <textarea
+                        name="message"
+                        id="message"
+                        placeholder="Message"
+                        rows="4"
+                      ></textarea>
+                    </div>
+                  </div>
+                </form>
+                <ul className="actions">
+                  <li>
+                    <input type="submit" value="Send Message" />
+                  </li>
+                </ul>
+              </div>
+              <div className="4u 12u$(small)">
+                <ul className="labeled-icons">
+                  <li>
+                    <h3 className="icon fa-home">
+                      <span className="label">Address</span>
+                    </h3>
+                    3140 N Broadway APT 3F
+                    <br />
+                    Chicago, IL 60657
+                    <br />
+                    United States
+                  </li>
+                  <li>
+                    <h3 className="icon fa-mobile">
+                      <span className="label">Phone</span>
+                    </h3>
+                    708-259-0198
+                  </li>
+                  <li>
+                    <h3 className="icon fa-envelope-o">
+                      <span className="label">Email</span>
+                    </h3>
+                    <a href="#">APTricou@gmail.com</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </Layout>
+    )
+  }
 }
 
 export default HomeIndex
