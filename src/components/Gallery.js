@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import Carousel, { Modal, ModalGateway } from 'react-images'
+// import Carousel, { Modal, ModalGateway } from 'react-images'
 
 class Gallery extends Component {
   constructor() {
@@ -28,10 +28,12 @@ class Gallery extends Component {
           <a
             className="image fit thumb"
             href={obj.source}
-            onClick={e => {
-              e.preventDefault()
-              this.toggleLightbox(i)
-            }}
+            target="_blank"
+            rel="noopener noreferrer"
+            // onClick={e => {
+            //   e.preventDefault()
+            //   this.toggleLightbox(i)
+            // }}
           >
             <img src={obj.thumbnail} />
           </a>
@@ -51,13 +53,13 @@ class Gallery extends Component {
     return (
       <div>
         {this.renderGallery(images)}
-        <ModalGateway>
+        {/* <ModalGateway>
           {lightboxIsOpen && (
             <Modal onClose={this.toggleLightbox}>
               <Carousel currentIndex={selectedIndex} views={images} />
             </Modal>
           )}
-        </ModalGateway>
+        </ModalGateway> */}
       </div>
     )
   }
