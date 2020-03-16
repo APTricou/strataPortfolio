@@ -169,6 +169,7 @@ class HomeIndex extends React.Component {
             <div className="row">
               <div className="8u 12u$(small)">
                 <form
+                  name="form1"
                   method="post"
                   data-netlify-honeypot="bot-field"
                   data-netlify="true"
@@ -196,12 +197,13 @@ class HomeIndex extends React.Component {
                       </textarea>
                     </div>
                   </div>
+                  <input
+                    style={{ marginTop: 10 }}
+                    type="submit"
+                    form="form1"
+                    value="Send Message"
+                  />
                 </form>
-                <ul className="actions">
-                  <li>
-                    <input type="submit" value="Send Message" />
-                  </li>
-                </ul>
               </div>
               <div className="4u 12u$(small)">
                 <ul className="labeled-icons">
