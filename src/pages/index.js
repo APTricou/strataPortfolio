@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import 'mailgo'
 
 import Layout from '../components/layout'
 // import Lightbox from 'react-images'
@@ -169,7 +168,12 @@ class HomeIndex extends React.Component {
             </p>
             <div className="row">
               <div className="8u 12u$(small)">
-                <form method="post" action="#">
+                <form
+                  method="post"
+                  netlify-honeypot="bot-field"
+                  data-netlify="true"
+                >
+                  <input type="hidden" name="bot-field" />
                   <div className="row uniform 50%">
                     <div className="12u 12u$(xsmall)">
                       <input
@@ -195,15 +199,7 @@ class HomeIndex extends React.Component {
                 </form>
                 <ul className="actions">
                   <li>
-                    <a
-                      href="#mailgo"
-                      data-address="APTricou"
-                      data-domain="gmail.com"
-                      data-subject="ContactMe"
-                      data-body={this.state.text}
-                    >
-                      <input type="submit" value="Send Message" />
-                    </a>
+                    <input type="submit" value="Send Message" />
                   </li>
                 </ul>
               </div>
@@ -230,11 +226,7 @@ class HomeIndex extends React.Component {
                       <span className="label">Email</span>
                     </h3>
                     <a
-                      href="#mailgo"
-                      data-address="APTricou"
-                      data-domain="gmail.com"
-                      data-subject="Personal Website Contact"
-                      data-body={this.text}
+                      href={`mailto:APTricou@gmail.com?subject=Personal_Website_Contact&body=${this.text}`}
                     >
                       APTricou@gmail.com
                     </a>

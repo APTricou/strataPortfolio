@@ -19,6 +19,7 @@ class Footer extends React.Component {
               <a
                 href="https://www.github.com/APTricou"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="icon fa-github"
               >
                 <span className="label">Github</span>
@@ -28,6 +29,7 @@ class Footer extends React.Component {
               <a
                 href="mailto:aptricou@gmail.com"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="icon fa-envelope-o"
               >
                 <span className="label">Email</span>
