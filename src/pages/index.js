@@ -9,7 +9,8 @@ import thumb01 from '../assets/images/fulls/SVGBoardSplash.png'
 import thumb02 from '../assets/images/fulls/MusicBars.jpg'
 import thumb03 from '../assets/images/fulls/battleship.jpg'
 import thumb04 from '../assets/images/fulls/Discord.jpg'
-// import thumb05 from '../assets/images/thumbs/05.jpg'
+import thumb05 from '../assets/images/fulls/SafeSlot.png'
+import Profile from '../assets/images/fulls/Antanas-vertical.png'
 // import thumb06 from '../assets/images/thumbs/06.jpg'
 
 // import full01 from '../assets/images/fulls/SVGBoardSplash.png'
@@ -22,39 +23,40 @@ import thumb04 from '../assets/images/fulls/Discord.jpg'
 const IMAGES = [
   {
     id: '1',
+    source: 'https://safeslot.in/',
+    thumbnail: thumb05,
+    caption: 'SafeSlot',
+    description:
+      'A Covid-19 response app that lets stores manage customer flow.',
+  },
+  {
+    id: '2',
     source: 'https://svg-board.herokuapp.com/',
     thumbnail: thumb01,
     caption: 'SVG Board',
     description: 'An online multi-user whiteboard platform.',
   },
   {
-    id: '2',
+    id: '3',
     source: 'https://github.com/APTricou/Read_The_Room',
     thumbnail: thumb02,
     caption: 'Read The Room',
     description: "An interactive playlist creator tied into Spotify's API.",
   },
   {
-    id: '3',
+    id: '4',
     source: 'https://github.com/ProjectPineapple/Ananas2',
     thumbnail: thumb03,
     caption: 'SeaBay',
     description: 'A fictional ecommerce site with full Stripe functionality.',
   },
   {
-    id: '4',
+    id: '5',
     source: 'https://github.com/APTricou/AnythingBot',
     thumbnail: thumb04,
     caption: 'Discord Bot',
     description: 'A functional Discord Bot with ever expanding capabilities.',
   },
-  // {
-  //   id: '5',
-  //   source: full05,
-  //   thumbnail: thumb05,
-  //   caption: 'Sojourn TRC',
-  //   description: 'A static website build with Gatsby and Netlify, with CMS.',
-  // },
   // {
   //   id: '6',
   //   source: full06,
@@ -149,22 +151,49 @@ class HomeIndex extends React.Component {
                 })
               )}
             />
+          </section>
 
-            {/* <ul className="actions">
-              <li>
-                <a href="#" className="button">
-                  Full Portfolio
-                </a>
-              </li>
-            </ul> */}
+          <section id="medium">
+            <h2>Blog</h2>
+            <p>
+              Check out my Medium Articles covering topics concerning front end
+              development, tech world stuff, and other musings.
+            </p>
+            <div className="row">
+              <div className="bordered">
+                <article className="7u 12u$(xsmall) work-item">
+                  <a
+                    className="image fit thumb"
+                    href="https://medium.com/@aptricou"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={Profile} />
+                  </a>
+                </article>
+                <div className="desc">
+                  <h3>Medium</h3>
+                  <p>
+                    Antanas is a Chicago Developer who loves to find new
+                    technologies and explore new possibilities. He loves
+                    building things, anything. If there are problems to be
+                    solved, and processes to improve on, then the work of an
+                    engineer is never done. And there are always problems to
+                    solve.
+                  </p>
+                </div>
+              </div>
+            </div>
           </section>
 
           <section id="three">
             <h2>Get In Touch</h2>
             <p>
               I am currently interested in entry level developer positions.
-              While my background is primarily Javascript and React, I am
-              flexible and interested in learning new languages and frameworks.
+              While my background is primarily in Javascript, Node.js, and
+              React, I am flexible and interested in learning your languages and
+              frameworks. I have some experience in Java, Angular, Vue, C#,
+              Python, and Svelte.
             </p>
             <div className="row">
               <div className="8u 12u$(small)">

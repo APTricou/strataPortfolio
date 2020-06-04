@@ -1006,6 +1006,26 @@
 		}
 	}
 
+/* Medium */
+
+    #medium {
+		// margin-left: $size-header-width;
+		// max-width: 50em + $size-header-pad;
+		// padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
+		// width: calc(100% - #{$size-header-width});
+
+		.bordered {
+			padding: 1rem;
+			border: 1px _palette(border) solid;
+			border-radius: 1rem;
+			display: flex;
+
+			.desc {
+				margin: 0 1rem;
+			}
+		}
+	}
+
 /* Poptrox */
 
 	@include keyframes('spin') {
@@ -1322,7 +1342,6 @@
 				padding: ($size-header-pad * 1.5) $size-header-pad;
 				width: 100%;
 			}
-
 	}
 
 /* Small */
@@ -1399,6 +1418,12 @@
 				> section {
 					margin: ($size-header-pad * 1.5) 0 0 0;
 					padding: ($size-header-pad * 1.5) 0 0 0;
+				}
+			}
+
+			#medium {
+				.bordered {
+					display: inline-block;
 				}
 			}
 
